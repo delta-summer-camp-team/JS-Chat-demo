@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delta Online Chat</title>
+
+  <!-- Firebase modules -->
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/7.15.1/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/7.15.1/firebase-auth.js"></script>
+  <script defer src="/__/firebase/7.15.1/firebase-database.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+  <link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="init()">
+
+<h1>Delta Chat</h1>
+<button onclick="alert('Hello!!!');">Hello!</button>
+
+<!-- login block -->
+<div id="loginBlock" class="modal_dialog" style="display: none">
+  <form action="javascript:void(0);" onsubmit="login()">
+    <h1>Пожалуйста, авторизуйтесь:</h1>
+    <div class="wrap modal_input">
+      <div><label for="email">E-mail:</label><input id="email" type="email"></div>
+      <div><label for="password">Password:</label><input id="password" type="password"></div>
+    </div>
+    <div class="wrap">
+      <button id="submit" type="submit">Войти</button>
+      <button id="register" type="reset" onclick="showRegister()">Регистрация</button>
+    </div>
+  </form>
+</div> <!-- login -->
+
+<!-- register block -->
+<div id="registerBlock" class="modal_dialog" style="display: none">
+  <form action="javascript:void(0);" onsubmit="register()">
+    <h1>Пожалуйста, авторизуйтесь:</h1>
+    <div class="wrap modal_input">
+      <div><label for="regEmail">E-mail:</label><input id="regEmail" type="email"></div>
+      <div><label for="regPassword">Password:</label><input id="regPassword" type="password"></div>
+    </div>
+    <br>
+    <div class="wrap modal_input">
+      <div><label for="regNikname">Nikname:</label><input id="regNikname" type="text"></div>
+      <div><label for="regPassword2">Retype pass:</label><input id="regPassword2" type="password"></div>
+    </div>
+    <div class="wrap">
+      <button id="regSubmit" type="submit">Войти</button>
+    </div>
+  </form>
+</div>
+</body>
+<script src="js/main.js"></script>
+<script src="js/auth.js"></script>
+</html>

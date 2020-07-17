@@ -1,0 +1,28 @@
+.modal_dialog {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.modal_dialog form {
+    z-index: 1;
+    background-color: floralwhite;
+    border: darkblue 1px solid;
+    border-radius: 20px;
+    width: 60%;
+    margin: 4em auto auto;
+}
+
+.modal_input input[type = 'text'],
+.modal_input input[type = 'email'],
+.modal_input input[type = 'password'] {
+    width: 15em;
+    height: 2em;
+    font-size: 1em;
+    padding-left: 1em;
+}
+

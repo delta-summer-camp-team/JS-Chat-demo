@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif !important;
+}
+
+h1 {
+    text-align: center;
+    margin: 1.5em;
+}
+
+button {
+    height: 50px;
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: x-large;
+    margin: 2em;
+}
+
+form {
+    font-size: large;
+}
+
+form input {
+    height: 1.5em;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    padding: 5px 0;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-around;
+}
