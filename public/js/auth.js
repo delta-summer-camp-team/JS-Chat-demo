@@ -1,4 +1,5 @@
 function auth() {
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION);
   firebase.auth().onAuthStateChanged(user => {
     if (user == null) {
       // show login form
@@ -9,6 +10,10 @@ function auth() {
       console.log('Ready to chat');
     }
   });
+}
+
+function logoff() {
+  firebase.auth().signOut();
 }
 
 function login() {
@@ -48,6 +53,12 @@ function register() {
     return false;
   } else {
     firebase.auth().createUserWithEmailAndPassword(email, passwd)
+      .then(()=>{
+        let user = firebase.auth().currentUser;
+        user.updateProfile({
+          displayName: nikname
+        })
+      })
       .catch((error)=> {
         alert(error.message);
         document.querySelector('#password').value = '';

@@ -1,5 +1,5 @@
 function init() {
   auth();
-
+  initChat();
 
 }
